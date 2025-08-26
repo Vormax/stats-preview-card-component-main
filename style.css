@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "inter";
+    src: url("/design/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+    font-family: "Lexend";
+    src: url("/design/Lexend_Deca/LexendDeca-VariableFont_wght.ttf");
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    max-width: 1440px;
+    font-family: "inter";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 0.9375rem;
+    padding-left: 9.375rem;
+    padding-right: 9.375rem;
+}
+.card {
+    display: flex;
+    flex-direction:row-reverse;
+    background-color: hsl(244, 37%, 16%);
+    border-radius: 0.5rem;
+    
+}
+.card-content {
+    flex-basis: 50%;
+    padding: 5rem;
+}
+.card-image {
+    flex-basis: 50%;
+    position: relative;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.card-image::before {
+  content: ''; 
+  position: absolute; 
+  top: 0;           
+  left: 0;          
+  width: 100%;      
+  height: 100%;     
+  background-color: hsl(277, 64%, 61%); 
+  mix-blend-mode:multiply;
+}
+h1 {
+    color: hsl(0, 0%, 100%);
+    font-family: "inter";
+    font-weight: 700;
+}
+.highlight {
+    color: hsl(277, 64%, 61%);
+}
+.main-par {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+    font-weight: 400;
+    padding-bottom: 3.15rem;
+}
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 0.7;
+}
+.stat-heading {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: "Lexend";
+    font-size: 0.75rem;
+}
+.stat-number {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+@media (max-width:768px) {
+    .card {
+        flex-direction: column;
+    }
+    .card-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .card-image {
+        max-width: 100%;
+    }
+    .stats {
+        flex-direction: column;
+    }
+    .stat {
+        margin-bottom: 1.25rem;
+    }
+    .card-image img {
+  width: none;
+  height: none;
+  object-fit: none; 
+}
+}
